@@ -17,6 +17,7 @@
   --white-rgba:rgba(255, 255, 255, 0.6);
   --color-border:#EEEEEE;
   --color-border-header:#ECECEC;
+  --color-icon-off:#AFB1B8;
 }
 
 h1,
@@ -236,8 +237,6 @@ body {
   background-position:center;
   background-repeat:no-repeat;
   border-radius: 4px;
-  /* background-image:url('../images/antenna\ 1.svg'); */
-  border:1px solid  var(--color-border-header);
   background-color: var(--color-button);
   margin-bottom: 30px;
 }
@@ -363,10 +362,17 @@ body {
   border-radius:50%;
   justify-content: center;
   align-items: center;
+  color:var(--color-icon-off);
 }
+
+.icon-cont{
+  fill: currentColor;
+}
+
 .team-person-cont-link:focus,
 .team-person-cont-link:hover{
   background: var(--blue);
+  color:var(--white)
 }
 
 
@@ -377,27 +383,24 @@ body {
 .link-client {
   display:flex;
   border-radius: 4px;
-  border: 1px solid #AFB1B8;
+  border: 1px solid var(--color-icon-off);
   height: 92px;
   align-items: center;
   justify-content: center;
+  color:var(--color-icon-off);
 
 }
 
 .icon-client{
-  fill: #AFB1B8;
+  fill: currentColor;
 }
 
 .link-client:hover,
 .link-client:focus {
-  border: 1px solid #2196F3;
+  border: 1px solid var(--blue);
+  color: var(--blue)
 }
 
-
-.link-client:focus .icon-client,
-.link-client:focus .icon-client {
-  fill: #2196F3;
-}
 
 .filter-list{
   display:flex;
@@ -446,11 +449,16 @@ body {
 .project-item{
   flex-basis: calc(100%/3 - 30px);
 }
+.project-link{
+  display: flex;
+  flex-direction: column;
+}
 
-.project-item:hover,
-.project-item:focus{
+.project-link:hover,
+.project-link:focus{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
 
 .project-desc{
   padding: 20px 24px;
@@ -491,12 +499,13 @@ body {
 }
 .foot .team-person-cont-link{
   background: #FFFFFF1A;
-  fill: var(--white);
+  color: var(--white);
 }
 
 .foot .team-person-cont-link:hover,
 .foot .team-person-cont-link:focus{
   background: var(--blue);
+  
 }
 
 .address-conteiner{
